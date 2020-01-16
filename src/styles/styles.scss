@@ -1,9 +1,25 @@
-//  #variables import
+/*    Estructura ITCSS    */
+// Orden de importación de las carpetas:
+/*
+    1. Settings - Variables
+    2. Tools - Functions (mixins)
+    3. Generic - 3rd Party
+    4. Base - Bare Elements
+    5. Objects - Layout Classes
+    6. Components - UI Classes
+    7. Trumps - IDs and !important
+*/
+
+//  1. Settings - Variables
 @import './imports/settings.imports';
+
+
+// 2. Tools - Functions
+@import '~normalize.css';
+@import '~bootstrap/scss/bootstrap-grid';
 
 //  #elements import
 @import './imports/elements.imports';
 
-@import './reset';
 
 

@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Houses from '../pages/Houses';
 import MainMenu from './shared/MainMenu';
 import Timeline from '../pages/Timeline';
+import { useTranslation } from 'react-i18next';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,12 +13,17 @@ import {
 } from "react-router-dom";
 import '../styles/styles.scss';
 
-const App = () => {
+function App() {
+  const { i18n } = useTranslation();
+
+  function handleLangClick(lang) {
+    i18n.changeLanguage(lang);
+  }
   return (
     <div className="App">
       <Router>
         <div>
-          <Header />
+          <Header changeLang={handleLangClick} />
           <Switch>            
             <Route path="/characters">
               <Characters />
@@ -31,7 +37,7 @@ const App = () => {
             <Route path="/">
               <Home />
             </Route>
-          </Switch>
+          </Switch>          
           <MainMenu />
         </div>
       </Router>

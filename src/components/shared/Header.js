@@ -1,16 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './header.scss';
 
-const Houses = () => {
+function Header({ changeLang }) {
+  const { t } = useTranslation();
+  
   return (
     <nav className='c-header'>
       <ul className='c-header__menu'>
-        <li className='c-header__item'>HOME</li>
-        <li className='c-header__item'>ES</li>
-        <li className='c-header__item'>EN</li>
+        <li className='c-header__item'>{t('home')}</li>
+        <li className='c-header__item' onClick={() => changeLang('es')}>ES</li>
+        <li className='c-header__item' onClick={() => changeLang('en')}>EN</li>
       </ul> 
     </nav>
   );
 }
 
-export default Houses;
+export default Header;
