@@ -7,7 +7,7 @@ const MainMenu = () => {
     const { t } = useTranslation();
     return(
         <nav className='c-main-menu'>
-            <ul className='c-main-menu__menu'>
+            <ul className='c-main-menu__menu o-pad-l--m o-pad-r--m'>
                 <li className='c-main-menu__item'>
                     <Link to="/characters">{t('characters')}</Link>
                 </li>

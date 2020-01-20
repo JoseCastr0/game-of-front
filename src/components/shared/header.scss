@@ -1,7 +1,24 @@
 @import '../../styles/imports/settings.imports';
 
 .c-header {
-    color: $color--white;
+    color: $color--white;    
+    display: flex;
+    justify-content: flex-end;
     position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 1;
+
+    &__menu {
+        align-items: center;
+        display: flex;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__flag {
+        width: 40px;
+    }
 }

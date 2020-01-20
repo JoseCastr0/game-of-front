@@ -1,0 +1,111 @@
+/*-------------------------------------------
+	PADDING SIZES
+---------------------------------------------*/
+
+.o-pad-r {
+    padding-right: $base-padding;
+    &--xs{
+        padding-right: $base-padding-xs;
+    }
+
+    &--s {
+        padding-right: $base-padding-s;
+    }
+
+    &--m {
+        padding-right: $base-padding-m;
+    }
+
+    &--l {
+        padding-right: $base-padding-l;
+    }
+
+    &--xl {
+        padding-right: $base-padding-xl;
+    }
+
+    &--xxl {
+        padding-right: $base-padding-xxl;
+    }
+}
+
+.o-pad-l {
+    padding-left: $base-padding;
+    &--xs{
+        padding-left: $base-padding-xs;
+    }
+
+    &--s {
+        padding-left: $base-padding-s;
+    }
+
+    &--m {
+        padding-left: $base-padding-m;
+    }
+
+    &--l {
+        padding-left: $base-padding-l;
+    }
+
+    &--xl {
+        padding-left: $base-padding-xl;
+    }
+
+    &--xxl {
+        padding-left: $base-padding-xxl;
+    }
+}
+
+.o-pad-t {
+    padding-top: $base-padding;
+    &--xs{
+        padding-top: $base-padding-xs;
+    }
+
+    &--s {
+        padding-top: $base-padding-s;
+    }
+
+    &--m {
+        padding-top: $base-padding-m;
+    }
+
+    &--l {
+        padding-top: $base-padding-l;
+    }
+
+    &--xl {
+        padding-top: $base-padding-xl;
+    }
+
+    &--xxl {
+        padding-top: $base-padding-xxl;
+    }
+}
+
+.o-pad-b {
+    padding-bottom: $base-padding;
+    &--xs{
+        padding-bottom: $base-padding-xs;
+    }
+
+    &--s {
+        padding-bottom: $base-padding-s;
+    }
+
+    &--m {
+        padding-bottom: $base-padding-m;
+    }
+
+    &--l {
+        padding-bottom: $base-padding-l;
+    }
+
+    &--xl {
+        padding-bottom: $base-padding-xl;
+    }
+
+    &--xxl {
+        padding-bottom: $base-padding-xxl;
+    }
+}

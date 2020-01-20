@@ -1,0 +1,35 @@
+/* Global base
+   ****************************************************************************/
+
+   $base: 8px;
+
+   /* Spacing
+      ****************************************************************************/
+   
+   $base-padding-factor-xs: .25 !default;
+   $base-padding-factor-s: .5 !default;
+   $base-padding-factor-m: 2 !default;
+   $base-padding-factor-l: 3 !default;
+   $base-padding-factor-xl: 4 !default;
+   $base-padding-factor-xxl: 5 !default;
+   
+   $base-padding-xs: $base * $base-padding-factor-xs !default; // 8 * .25 = 2
+   $base-padding-s: $base * $base-padding-factor-s !default; // 8 * .5 = 4
+   $base-padding: $base !default; // 8
+   $base-padding-m: $base * $base-padding-factor-m !default; // 8 * 2 = 16
+   $base-padding-l: $base * $base-padding-factor-l !default; // 8 * 3 = 24
+   $base-padding-xl: $base * $base-padding-factor-xl !default; // 8 * 4 = 32
+   $base-padding-xxl: $base * $base-padding-factor-xxl !default; // 8 * 5 = 64
+   
+   /* Wrapper
+      ****************************************************************************/
+   
+//    $base-wrapper-factor-width: 150 !default;
+//    $base-wrapper-width: $base * $base-wrapper-factor-width !default; // 8 * 150 = 1200
+   
+   /* Font size
+      ****************************************************************************/
+   
+//    $base-factor-font-size: 2;
+//    $base-font-size: $base * $base-factor-font-size; // 8 * 2 = 16
+   
