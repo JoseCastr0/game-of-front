@@ -9,13 +9,22 @@
 
     &__menu {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
     }
 
     &__item {     
+        cursor: pointer;
         list-style: none;
         text-align: center;
         width: 250px;
+
+        &--left {
+            text-align: left;
+        }
+
+        &--right {
+            text-align: right;
+        }
     }
 }

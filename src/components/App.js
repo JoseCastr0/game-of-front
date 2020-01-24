@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <main class="container">
+        <main className="container">
           <Header changeLang={handleLangClick} />
           <Switch>            
             <Route path="/characters">

@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Houses = () => {
+function Houses() {
+  const [characters, setCharacters] = useState({ hits: [] });
+
+  useEffect(() => {
+    fetch("https://api.got.show/api/show/characters/")
+      .then(res => res.json())
+      .then(setCharacters)
+  }, []);
+
+  console.log(characters);
   return (
-    <div>ESto es HOUSES</div>
+    <div className='c-houses-container'>
+      ESto es HOUSES
+    </div>
   );
 }
 

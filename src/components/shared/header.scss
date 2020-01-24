@@ -4,7 +4,7 @@
     color: $color--white;    
     display: flex;
     justify-content: flex-end;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -15,7 +15,9 @@
     }
 
     &__item {
+        cursor: pointer;
         list-style: none;
+        margin-left: 16px;
     }
 
     &__flag {

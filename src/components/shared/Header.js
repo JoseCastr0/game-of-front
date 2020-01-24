@@ -8,7 +8,7 @@ function Header({ changeLang }) {
   const { t } = useTranslation();
   
   return (
-    <nav className='c-header container-fluid'>
+    <nav className='c-header container'>
       <ul className='c-header__menu'>
         <li className='c-header__item'>{t('home')}</li>
         <li className='c-header__item' onClick={() => changeLang('es')}><img className='c-header__flag' src={esFlag} alt='spain flag' /></li>

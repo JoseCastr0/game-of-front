@@ -1,6 +1,7 @@
 @import '../styles/settings/fonts.settings';
 
 .c-home-container {
+    align-items: center;
     background: url('../imgs/throne-back.png') center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -10,7 +11,7 @@
     height: 100vh;
     justify-content: center;
     left: 0;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
 
