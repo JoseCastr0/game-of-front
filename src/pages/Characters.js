@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import './characters.scss';
 
 function Characters() {
@@ -10,21 +11,31 @@ function Characters() {
       .then(setCharacters)
   }, []);
 
-  console.log(characters);
-
   return (
-    <main className='c-characters container-fluid'>
-      <div className='c-characters__wrapper'>
-        {
-          characters.map(character => {
-            return (
-              <div key={character.id}>
-                <img src={character.image} alt={character.name}/>
-              </div>
-            )
-          })
-        }
-      </div>
+    <main className='c-gallery-wrapper container-fluid'>
+      <div className='c-img-gallery'>
+       
+          {
+            characters.map(character => {
+              return (
+                <Link to={`/characters/detail/${character.slug}`}>
+                  <figure className='c-img-gallery__item'>
+                    <img
+                        className='c-img-gallery__img'
+                        key={character.id} 
+                        src={character.image} 
+                        alt={character.name}
+                    />
+                      <figcaption className='c-img-gallery__img-caption'>
+                        {character.name}
+                      </figcaption>   
+                  </figure>
+                </Link>
+                  )
+                })
+          }
+        </div>
+      
     </main>
   );
 }

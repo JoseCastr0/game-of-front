@@ -1,10 +1,77 @@
-@import '../styles/settings/sizes.settings';
+@import '../styles/imports/settings.imports';
 
-.c-characters {
+.c-img-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    height: calc(100vh - (#{$header-height} + #{$main-menu-height}));
+    overflow-y: scroll;
+    width: 100%;
+    font-family: $got-font;
 
-    &__wrapper {
-        height: calc(100vh - (#{$header-height} + #{$main-menu-height}));
-        overflow-y: scroll;
+    &__item {
+        box-sizing: border-box;
+        margin: 0;
+        overflow: hidden;
+        padding: 0 16px 16px;
+        position: relative;
         width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+            transition: .5s;
+
+            & .c-img-gallery__img-caption {
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+                bottom: 16px;
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        -webkit-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        width: 100%;
+    }
+
+    &__img-caption {
+        background: rgba(#000, .4);
+        bottom: 0;
+        height: 20%;
+        padding-top: 16px;
+        position: absolute;
+        text-align: center;
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);    
+        transition: all .5s;
+        width: calc(100% - (16px*2));
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    .c-img-gallery__item {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .c-img-gallery__item {
+        flex-basis: calc(100% / 4);
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .c-img-gallery__item {
+        flex-basis: calc(100% / 6);
     }
 }
