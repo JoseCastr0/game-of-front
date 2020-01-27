@@ -1,0 +1,10 @@
+@import '../styles/settings/sizes.settings';
+
+.c-characters {
+
+    &__wrapper {
+        height: calc(100vh - (#{$header-height} + #{$main-menu-height}));
+        overflow-y: scroll;
+        width: 100%;
+    }
+}

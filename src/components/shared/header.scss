@@ -2,12 +2,16 @@
 
 .c-header {
     color: $color--white;    
-    display: flex;
-    justify-content: flex-end;
+    height: $header-height;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
 
     &__menu {
         align-items: center;
