@@ -25,18 +25,18 @@ function App() {
       <Router>
         {/* <main className="container"> */}
           <Header changeLang={handleLangClick} />
-          <Switch>
-            <Route path="/characters">
-              <Characters />
-            </Route>
+          <Switch>            
             <Route path="/houses">
               <Houses />
             </Route>
             <Route path="/chronology">
               <Timeline />
             </Route>
-            <Route path="/characters/detail/:slug">
+            <Route path="/characters/:slug">
               <CharacterDetail />
+            </Route>
+            <Route path="/characters">
+              <Characters />
             </Route>
             <Route path="/">
               <Home />

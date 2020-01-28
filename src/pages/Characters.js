@@ -18,19 +18,19 @@ function Characters() {
           {
             characters.map(character => {
               return (
-                <Link to={`/characters/detail/${character.slug}`}>
-                  <figure className='c-img-gallery__item'>
+                <figure key={character.id} className='c-img-gallery__item'>
+                  <Link to={`/characters/${character.slug}`}>
                     <img
                         className='c-img-gallery__img'
-                        key={character.id} 
+                         
                         src={character.image} 
                         alt={character.name}
                     />
                       <figcaption className='c-img-gallery__img-caption'>
                         {character.name}
                       </figcaption>   
+                  </Link>
                   </figure>
-                </Link>
                   )
                 })
           }

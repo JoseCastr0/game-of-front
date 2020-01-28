@@ -1,23 +1,70 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './characters.scss';
 
 function CharacterDetail() {
     let { slug } = useParams();
+    const { t } = useTranslation();
     const [details, setDetails] = useState([]);
+    const [houses, setHouses] = useState([]);
 
     useEffect(() => {
         fetch(`https://api.got.show/api/show/characters/bySlug/${slug}`)
             .then(res => res.json())
-            .then(setDetails)
-    }, [slug]);
+            .then((res) => {
+                console.log(res)
+                setDetails(res)
+                fetch(`https://api.got.show/api/show/houses/${res.house}`)
+                .then(res => res.json())
+                .then(setHouses)
+            })
+        
+        
+    }, []);
 
-    console.log("slug", slug);
+
+    console.log("details", details);
+    console.log("houses", houses);
+    console.log("houses", houses.logoURL);
 
     return (
-        <main className='c-gallery-wrapper container-fluid'>
-            <div className='c-img-gallery'>
-                {details.name}
+        <main className='c-details'>
+            <div className=''>
+                <img 
+                    className=''
+                    src={details.image} 
+                    alt={details.name}
+                />
+                <h2>{details.name}</h2>
+                <h2>House img url: {houses.logoURL}</h2>
+                <section className='c-details__info-wrapper'>
+                    <div className='c-details__info-col'>
+                        <h3>{t('houses')}</h3>
+                        <img
+                            className='' 
+                            src={houses.logoURL}
+                            alt='' 
+                        />
+                    </div>
+                    <div className='c-details__info-col'>
+                        <h3>{t('houses')}</h3>
+                        <ul>
+                            {
+                                
+                                details.map(el => {
+                                    el.allegiances.map(o => {
+                                        return <li>{o}</li>
+                                    }
+                                        )
+                                })
+                                //console.log('allegiances', typeof details.allegiances)
+                                
+                            }
+                            <li></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
 
         </main>
