@@ -19,14 +19,12 @@ function CharacterDetail() {
                 .then(res => res.json())
                 .then(setHouses)
             })
-        
-        
     }, []);
 
 
     console.log("details", details);
-    console.log("houses", houses);
-    console.log("houses", houses.logoURL);
+    //console.log("houses", houses);
+    console.log("houses", houses[0]);
 
     return (
         <main className='c-details'>
@@ -51,15 +49,9 @@ function CharacterDetail() {
                         <h3>{t('houses')}</h3>
                         <ul>
                             {
-                                
-                                details.map(el => {
-                                    el.allegiances.map(o => {
-                                        return <li>{o}</li>
-                                    }
-                                        )
+                                details.allegiances && details.allegiances.map(el => {
+                                    return <li key={el}>{el}</li>
                                 })
-                                //console.log('allegiances', typeof details.allegiances)
-                                
                             }
                             <li></li>
                         </ul>
