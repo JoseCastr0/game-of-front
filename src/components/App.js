@@ -23,7 +23,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <main className="container"> */}
           <Header changeLang={handleLangClick} />
           <Switch>            
             <Route path="/houses">
@@ -43,7 +42,6 @@ function App() {
             </Route>
           </Switch>          
           <MainMenu />
-        {/* </main> */}
       </Router>
     </div>
   );
