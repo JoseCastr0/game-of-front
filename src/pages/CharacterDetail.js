@@ -13,8 +13,8 @@ function CharacterDetail() {
         fetch(`https://api.got.show/api/show/characters/bySlug/${slug}`)
             .then(res => res.json())
             .then((res) => {
-                console.log(res)
-                setDetails(res)
+                console.log(res);
+                setDetails(res);
                 fetch(`https://api.got.show/api/show/houses/${res.house}`)
                 .then(res => res.json())
                 .then(setHouses)
