@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import './characters.scss';
+import Gallery from '../components/gallery/Gallery';
 
 function Houses() {
-  const [characters, setCharacters] = useState({ hits: [] });
+  const [houses, setHouses] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.got.show/api/show/characters/")
+    fetch('https://api.got.show/api/show/houses/')
       .then(res => res.json())
-      .then(setCharacters)
+      .then(setHouses)
   }, []);
 
-  console.log(characters);
   return (
-    <div className='c-houses-container'>
-      ESto es HOUSES
-    </div>
+    <Gallery 
+      houses={houses}
+    />
   );
 }
 

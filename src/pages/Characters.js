@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './characters.scss';
+import Gallery from '../components/gallery/Gallery';
 
 function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -12,29 +11,9 @@ function Characters() {
   }, []);
 
   return (
-    <main className='c-gallery-wrapper container-fluid'>
-      <div className='c-img-gallery'>       
-          {
-            characters.map(character => {
-              return (
-                <figure key={character.id} className='c-img-gallery__item'>
-                  <Link to={`/characters/${character.slug}`}>
-                    <img
-                        className='c-img-gallery__img'                         
-                        src={character.image} 
-                        alt={character.name}
-                    />
-                      <figcaption className='c-img-gallery__img-caption'>
-                        {character.name}
-                      </figcaption>   
-                  </Link>
-                  </figure>
-                  )
-                })
-          }
-        </div>
-      
-    </main>
+    <Gallery 
+      characters={characters}
+    />
   );
 }
 
