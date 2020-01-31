@@ -2,7 +2,37 @@
 	FONT GENERATOR
 ---------------------------------------------*/
 
-@font-face {
-    font-family: "Got";
-    src: url("../../fonts/Game_of_Thrones.ttf");
-  }
+@include font-face(Got,
+  $font-path	+ "Game_of_Thrones",
+  normal,
+  normal,
+  ttf
+);
+
+@include font-face(Lato-Regular,
+  $font-path	+ "Lato-Regular",
+  normal,
+  normal,
+  ttf
+);
+
+@include font-face(Lato-Bold,
+  $font-path	+ "Lato-Bold",
+  normal,
+  normal,
+  ttf
+);
+
+@include font-face(Lato-Light,
+  $font-path	+ "Lato-Light",
+  normal,
+  normal,
+  ttf
+);
+
+@include font-face(Lato-Black,
+  $font-path	+ "Lato-Black",
+  normal,
+  normal,
+  ttf
+);

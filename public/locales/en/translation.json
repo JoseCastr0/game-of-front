@@ -1,6 +1,11 @@
 {
+    "allegiances": "allegiances",
+    "appearances": "appearances",
     "characters": "characters",
+    "father": "father",
     "home": "home",
     "houses": "houses",
-    "timeline": "timeline"
+    "siblings": "siblings",
+    "timeline": "timeline",
+    "titles": "titles"
 }

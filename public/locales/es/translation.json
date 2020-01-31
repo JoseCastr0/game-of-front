@@ -1,6 +1,11 @@
 {
+    "allegiances": "alianzas",
+    "appearances": "apariciones",
     "characters": "personajes",
+    "father": "padre",
     "home": "inicio",
     "houses": "casas",
-    "timeline": "cronología"
+    "siblings": "descendientes",
+    "timeline": "cronología",
+    "titles": "títulos"
 }

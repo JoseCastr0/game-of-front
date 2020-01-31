@@ -1,6 +1,6 @@
 import React from 'react';
 import Characters from '../pages/Characters';
-import CharacterDetail from '../pages/CharacterDetail';
+import Details from '../components/details/Details';
 import Header from './shared/Header';
 import Home from '../pages/Home';
 import Houses from '../pages/Houses';
@@ -32,7 +32,7 @@ function App() {
               <Timeline />
             </Route>
             <Route path="/characters/:slug">
-              <CharacterDetail />
+              <Details />
             </Route>
             <Route path="/characters">
               <Characters />

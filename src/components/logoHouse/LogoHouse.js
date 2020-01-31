@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './logoHouse.scss';
 
 function CharacterDetail({characterName}) {
     const [houses, setHouses] = useState([]);
@@ -17,7 +18,7 @@ function CharacterDetail({characterName}) {
         houses.map(house => {
             return (
                 <img
-                    className='' 
+                    className='c-logo-house' 
                     src={house.logoURL}
                     alt='' 
                 />
