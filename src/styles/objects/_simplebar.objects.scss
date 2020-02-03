@@ -1,0 +1,14 @@
+/*-------------------------------------------
+	STYLES FOR SIMPLE BAR NPM PACKAGE
+---------------------------------------------*/
+
+.o-simple-bar {
+    height: 100%;
+    width: 100%;
+    .simplebar-scrollbar{
+        background-color: #443d3d;
+        &:before {
+            background-color: #443d3d;
+        }
+    }
+}

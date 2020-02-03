@@ -32,8 +32,8 @@ function CharacterDetail() {
                     {/* </div> */}
                 </div>
                 <div className='c-details__details-row'>
-                    <div className="row">
-                        <div className='c-details__details-row'>
+                    <div className="c-details__details-row">
+                        <div className='row'>
                             <div className='col-2'>
                             <div className='c-details__col'>
                                 <h3 className='c-details__col-title'>{t('houses')}</h3>
@@ -46,11 +46,13 @@ function CharacterDetail() {
                                 <div className='c-details__col'>
                                     <h3 className='c-details__col-title'>{t('allegiances')}</h3>
                                     <ul className='c-details__items-list'>
-                                        {
-                                            details.allegiances && details.allegiances.map(el => {
-                                                return <li className='c-details__item' key={el}>{el}</li>
-                                            })
-                                        }
+                                        <SimpleBarReact className='o-simple-bar'>
+                                            {
+                                                details.allegiances && details.allegiances.map(el => {
+                                                    return <li className='c-details__item' key={el}>{el}</li>
+                                                })
+                                            }                                        
+                                        </SimpleBarReact>
                                     </ul>
                                 </div>
                             </div>
@@ -83,11 +85,13 @@ function CharacterDetail() {
                                 <div className='c-details__col'>
                                     <h3 className='c-details__col-title'>{t('siblings')}</h3>
                                     <ul className='c-details__items-list'>
+                                    <SimpleBarReact className='o-simple-bar'>
                                         {
                                             details.siblings && details.siblings.map(el => {
                                                 return <li className='c-details__item' key={el}>{el}</li>
                                             })
                                         }
+                                    </SimpleBarReact>
                                     </ul>
                                 </div>
                             </div>
@@ -95,11 +99,13 @@ function CharacterDetail() {
                                 <div className='c-details__col'>
                                     <h3 className='c-details__col-title'>{t('titles')}</h3>
                                     <ul className='c-details__items-list'>
-                                        {
-                                            details.titles && details.titles.map(el => {
-                                                return <li className='c-details__item' key={el}>{el}</li>
-                                            })
-                                        }
+                                        <SimpleBarReact className='o-simple-bar'>
+                                            {
+                                                details.titles && details.titles.map(el => {
+                                                    return <li className='c-details__item' key={el}>{el}</li>
+                                                })
+                                            }                                        
+                                        </SimpleBarReact>
                                     </ul>
                                 </div>
                             </div>

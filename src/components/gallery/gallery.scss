@@ -4,7 +4,7 @@
     display: flex;
     flex-flow: row wrap;
     height: calc(100vh - (#{$header-height} + #{$main-menu-height}));
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100%;
     font-family: $got-font;
 

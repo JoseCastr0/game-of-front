@@ -24,7 +24,7 @@
     }
 
     &__details-row {
-        display: flex;
+        //display: flex;
         height: calc(60vh - #{$main-menu-height});
         width: 100%;
     }
@@ -72,11 +72,3 @@
 //         flex-basis: calc(100% / 6);
 //     }
 // }
-
-.o-simple-bar {
-    height: 100%;
-    width: 100%;
-    .simplebar-scrollbar {
-        background-color: #FFF !important;
-    }
-}
