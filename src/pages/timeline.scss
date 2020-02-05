@@ -18,9 +18,30 @@
         width: 3px;
     }
 
+    &__cards-wrapper {
+        display: flex;
+        flex-flow: column;
+    }
+
     &__card {
         border-bottom: solid 2px #FFF;
         border-top: solid 2px #FFF;
-        height: 15vw;
+        height: 120px;
+        width: 50%;
+
+        &:nth-child(even) {
+            align-self: flex-end;
+            border-bottom: 0;
+            //margin-left: 50%;
+        }
+        &:nth-child(odd) {
+            //align-self: flex-end;
+            border-bottom: 0;
+            //margin-left: 50%;
+        }
+        &:nth-child(1n) {
+            margin-top: 64px;
+            //margin-left: 50%;
+        }
     }
 }

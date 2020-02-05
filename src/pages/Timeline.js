@@ -22,7 +22,7 @@ class Timeline extends Component {
           return el.age.age !== undefined
         })
 
-        this.setState({ characters: filteredData.sort((a, b) => a.age.age - b.age.age)});
+        this.setState({ characters: filteredData.sort((a, b) => a.age.age - b.age.age) });
       })
       .catch(err => {
         console.log(err)
@@ -32,7 +32,7 @@ class Timeline extends Component {
   orderCharacters() {
     this.setState({ characters: this.state.characters.sort((a, b) => this.sortByAge(a, b)) });
   }
-  
+
   sortByAge(a, b) {
     const { isDesc } = this.state;
     const diff = a.age.age - b.age.age;
@@ -53,19 +53,23 @@ class Timeline extends Component {
       <div className='c-timeline'>
         <SimpleBarReact className='o-simple-bar'>
           <button onClick={this.orderCharacters.bind(this)}>Order</button>
-          {
-            characters.map(character => {
-              return (
-                <div className='c-timeline__card'>
-                  <div>
-                    <h3>Name: {character.name} - edad: {character.age.age ? character.age.age : ''}</h3>
-                  </div>
-                </div>
-                )
-              })
-            }
-          </SimpleBarReact>
-        </div>
+          <section className='container'>
+            <div className='c-timeline__cards-wrapper'>
+              {
+                characters.map(character => {
+                  return (
+                    <div className='c-timeline__card'>
+                      <div>
+                        <h3>Name: {character.name} - edad: {character.age.age ? character.age.age : ''}</h3>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </section>
+        </SimpleBarReact>
+      </div>
     );
   }
 }
