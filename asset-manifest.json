@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/game-of-front/static/css/main.4816f6bd.chunk.css",
+    "main.js": "/game-of-front/static/js/main.6bbe4959.chunk.js",
+    "main.js.map": "/game-of-front/static/js/main.6bbe4959.chunk.js.map",
+    "runtime-main.js": "/game-of-front/static/js/runtime-main.695fed90.js",
+    "runtime-main.js.map": "/game-of-front/static/js/runtime-main.695fed90.js.map",
+    "static/css/2.daba7128.chunk.css": "/game-of-front/static/css/2.daba7128.chunk.css",
+    "static/js/2.63223aa1.chunk.js": "/game-of-front/static/js/2.63223aa1.chunk.js",
+    "static/js/2.63223aa1.chunk.js.map": "/game-of-front/static/js/2.63223aa1.chunk.js.map",
+    "index.html": "/game-of-front/index.html",
+    "precache-manifest.4db12240ad5165b0e65e80874ce45afb.js": "/game-of-front/precache-manifest.4db12240ad5165b0e65e80874ce45afb.js",
+    "service-worker.js": "/game-of-front/service-worker.js",
+    "static/css/2.daba7128.chunk.css.map": "/game-of-front/static/css/2.daba7128.chunk.css.map",
+    "static/css/main.4816f6bd.chunk.css.map": "/game-of-front/static/css/main.4816f6bd.chunk.css.map",
+    "static/js/2.63223aa1.chunk.js.LICENSE": "/game-of-front/static/js/2.63223aa1.chunk.js.LICENSE",
+    "static/media/styles.scss": "/game-of-front/static/media/Lato-Regular.2d36b1a9.ttf",
+    "static/media/spain_flag.svg": "/game-of-front/static/media/spain_flag.3aa4d3fe.svg",
+    "static/media/home.scss": "/game-of-front/static/media/throne-back.46457879.png",
+    "static/media/uk_flag.svg": "/game-of-front/static/media/uk_flag.4bb7a074.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.695fed90.js",
+    "static/css/2.daba7128.chunk.css",
+    "static/js/2.63223aa1.chunk.js",
+    "static/css/main.4816f6bd.chunk.css",
+    "static/js/main.6bbe4959.chunk.js"
+  ]
+}
