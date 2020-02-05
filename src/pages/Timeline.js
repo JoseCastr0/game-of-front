@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-import { Component } from 'react';
+import SimpleBarReact from "simplebar-react";
+import './timeline.scss';
 
 class Timeline extends Component {
   constructor() {
@@ -49,16 +50,22 @@ class Timeline extends Component {
   render() {
     const { characters } = this.state;
     return (
-      <div>
-        <button onClick={this.orderCharacters.bind(this)}>Order</button>
-        {
-          characters.map(character => {
-            return (
-              <div>Name: {character.name} - edad: {character.age.age ? character.age.age : ''}</div>
-            )
-          })
-        }
-      </div>
+      <div className='c-timeline'>
+        <SimpleBarReact className='o-simple-bar'>
+          <button onClick={this.orderCharacters.bind(this)}>Order</button>
+          {
+            characters.map(character => {
+              return (
+                <div className='c-timeline__card'>
+                  <div>
+                    <h3>Name: {character.name} - edad: {character.age.age ? character.age.age : ''}</h3>
+                  </div>
+                </div>
+                )
+              })
+            }
+          </SimpleBarReact>
+        </div>
     );
   }
 }
@@ -75,7 +82,7 @@ export default Timeline;
 //   //   fetch('https://api.got.show/api/show/characters/')
 //   //     .then(res => res.json())
 //   //     .then(setCharacters)
-//   // }, []); 
+//   // }, [setCharacters]); 
 
 //   useEffect(() => {
 //     axios.get('https://api.got.show/api/show/characters/')
