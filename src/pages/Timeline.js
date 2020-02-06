@@ -14,7 +14,6 @@ class Timeline extends Component {
   componentDidMount() {
     axios.get('https://api.got.show/api/show/characters/')
       .then(res => {
-        console.log(res);
         let filteredData = res.data.filter(char => {
           return char.age !== null
         }).filter(el => {
@@ -45,7 +44,6 @@ class Timeline extends Component {
     }
   }
 
-  //setCharacters(filterAge);
   render() {
     const { characters } = this.state;
     return (
