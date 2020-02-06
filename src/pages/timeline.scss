@@ -1,0 +1,47 @@
+@import '../styles/imports/settings.imports';
+
+.c-timeline {
+    display: flex;
+    flex-flow: row wrap;
+    height: calc(100vh - (#{$header-height} + #{$main-menu-height}));
+    overflow-y: auto;
+    width: 100%;
+    font-family: $got-font;
+
+    &:before {
+        content: '';
+        background-color: #ffffff;
+        border-radius: 10px;      
+        height: calc(100vh - (#{$header-height} + #{$main-menu-height}));
+        margin-left: 50%;
+        position: absolute;
+        width: 3px;
+    }
+
+    &__cards-wrapper {
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__card {
+        border-bottom: solid 2px #FFF;
+        border-top: solid 2px #FFF;
+        height: 120px;
+        width: 50%;
+
+        &:nth-child(even) {
+            align-self: flex-end;
+            border-bottom: 0;
+            //margin-left: 50%;
+        }
+        &:nth-child(odd) {
+            //align-self: flex-end;
+            border-bottom: 0;
+            //margin-left: 50%;
+        }
+        &:nth-child(1n) {
+            margin-top: 64px;
+            //margin-left: 50%;
+        }
+    }
+}
