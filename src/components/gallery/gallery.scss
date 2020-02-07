@@ -7,7 +7,7 @@
     overflow-y: auto;
     width: 100%;
     font-family: $got-font;
-
+    
     &__item {
         box-sizing: border-box;
         margin: 0;
@@ -56,6 +56,12 @@
         transition: all .5s;
         width: calc(100% - (16px*2));
     }
+
+    .simplebar-content {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
 }
 
 @media only screen and (min-width: 540px) {

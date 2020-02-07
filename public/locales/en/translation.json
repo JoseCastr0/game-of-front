@@ -3,9 +3,16 @@
     "appearances": "appearances",
     "characters": "characters",
     "father": "father",
+    "foundation": "fundacion",
+    "gameof": "Games of Thrones",
     "home": "home",
     "houses": "houses",
+    "region": "region",
+    "religions": "religions",
+    "search": "Search...",
+    "seat": "sede",
     "siblings": "siblings",
     "timeline": "timeline",
-    "titles": "titles"
+    "titles": "titles",
+    "words": "words"
 }

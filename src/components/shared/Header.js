@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import './header.scss';
 import esFlag from '../../imgs/spain_flag.svg';

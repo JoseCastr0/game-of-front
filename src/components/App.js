@@ -25,6 +25,9 @@ function App() {
       <Router>
           <Header changeLang={handleLangClick} />
           <Switch>            
+            <Route path="/houses/:name">
+              <Details />
+            </Route>
             <Route path="/houses">
               <Houses />
             </Route>
@@ -36,7 +39,7 @@ function App() {
             </Route>
             <Route path="/characters">
               <Characters />
-            </Route>
+            </Route>            
             <Route path="/">
               <Home />
             </Route>

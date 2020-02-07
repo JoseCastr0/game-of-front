@@ -3,9 +3,16 @@
     "appearances": "apariciones",
     "characters": "personajes",
     "father": "padre",
+    "foundation": "foundation",
+    "gameof": "Juego de Tronos",
     "home": "inicio",
     "houses": "casas",
+    "seat": "sede",
+    "search": "Buscar...",
     "siblings": "descendientes",
+    "region": "region",
+    "religions": "religions",
     "timeline": "cronología",
-    "titles": "títulos"
+    "titles": "títulos",
+    "words": "lema"
 }

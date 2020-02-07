@@ -1,20 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import Gallery from '../components/gallery/Gallery';
 
-function Characters() {
-  const [characters, setCharacters] = useState([]);
+class Characters extends Component {
+  constructor() {
+    super()
+    this.state = {
+      characters: [],
+      searchfield: ''
+    }
+  }
 
-  useEffect(() => {
+  componentDidMount() {
     fetch('https://api.got.show/api/show/characters/')
-      .then(res => res.json())
-      .then(setCharacters)
-  }, []);
+      .then(response=> response.json())
+      .then(characters => {this.setState({ characters: characters})});
+  }
 
-  return (
-    <Gallery 
-      characters={characters}
-    />
-  );
+  onSearchChange = (event) => {
+    this.setState({ searchfield: event.target.value })
+  }
+
+  render() {
+    const { characters, searchfield } = this.state;
+    const filteredCharacters = characters.filter(robot =>{
+      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+    })
+    return !characters.length ?
+      <h1>Loading...</h1> :
+      (
+        <Gallery 
+          characters={filteredCharacters}
+          searchChange={this.onSearchChange}
+        />
+      );
+  }
 }
 
 export default Characters;

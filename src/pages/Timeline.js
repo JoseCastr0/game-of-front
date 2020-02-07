@@ -20,7 +20,6 @@ class Timeline extends Component {
         }).filter(el => {
           return el.age.age !== undefined
         })
-
         this.setState({ characters: filteredData.sort((a, b) => a.age.age - b.age.age) });
       })
       .catch(err => {
@@ -50,15 +49,17 @@ class Timeline extends Component {
     return (
       <div className='c-timeline'>
         <SimpleBarReact className='o-simple-bar'>
-          <button onClick={this.orderCharacters.bind(this)}>Order</button>
+          <button className='c-timeline__order-btn' onClick={this.orderCharacters.bind(this)}>0</button>
           <section className='container'>
             <div className='c-timeline__cards-wrapper'>
               {
                 characters.map(character => {
                   return (
-                    <div className='c-timeline__card'>
-                      <div>
-                        <h3>Name: {character.name} - edad: {character.age.age ? character.age.age : ''}</h3>
+                    <div key={character.id} className='c-timeline__card'>
+                      <span className='c-timeline__age'>{character.age.age ? character.age.age : ''}</span>
+                      <h3 className='c-timeline__tittle'>{character.name}</h3>
+                      <div className='c-timeline__img-wrapper'>
+                        <img className='c-timeline__img' src={character.image} alt=""/>
                       </div>
                     </div>
                   )
